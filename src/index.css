@@ -1,0 +1,28 @@
+
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+  }
+  body {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply w-full px-5 sm:px-6 lg:px-8 xl:px-12 max-w-7xl mx-auto;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
